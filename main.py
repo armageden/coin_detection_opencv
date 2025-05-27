@@ -1,4 +1,4 @@
-import opencv as cv
+import cv2 as cv
 def main():
     # Load an image
     image = cv.imread('image.jpg')
