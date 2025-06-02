@@ -63,7 +63,7 @@ def coin_cnt(img_path):
     print(f"Total number of coins detected: {coin_cnt}")
     
 if __name__ == "__main__":
-    img_path = ""
+    img_path = "/home/backlog/Downloads/s-l1600-1014332594.jpg"
     # Provide the path to your image here
     coin_cnt(img_path)  # Call the function with the image path
     # Example: coin_cnt("path/to/your/image.jpg")
