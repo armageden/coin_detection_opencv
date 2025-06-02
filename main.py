@@ -15,7 +15,7 @@ def coin_cnt(img_path):
     cv2.waitKey(0)
     cv2.destroyAllWindows()# press any key to close the display window
     
-    edges_img=cv2.Canny(blur_img,50,156) # might need to change to detect more edges for a better result
+    edges_img=cv2.Canny(blur_img,60,299) # might need to change to detect more edges for a better result
     # to display the result at this point
     cv2.imshow("edges image",edges_img)
     cv2.waitKey(0)
@@ -40,7 +40,7 @@ def coin_cnt(img_path):
         #apox for a poligon
         approx=cv2.approxPolyDP(c,0.02*perm,True)
         
-        min,max=1000,10000 #might need adjustment based on the image size
+        min,max=100,1000000 #might need adjustment based on the image size
         circule=0 # to check if the contour is a circle but this   is for taking the value... please remember future me...
         if perm>0:
             circule=4*3.14*area/(perm*perm)
